@@ -236,17 +236,20 @@ R = R(ones(size(V))) ; % pre-allocation !!
 
 % 1. leading elements
 iend = min(-x0,nV-x1) ; % what is the last leading element, note that this might not exist
-for i=1:iend,
+for i=1:iend
+    %fprintf('Processing %d of %d...',i,nV); %dt
     R(i) = feval(FUN,V(1:i+x1),varargin{:}) ;
 end
 
 % 2. main portion of V, start were section 1 finished
-for i=(iend+1):(nV-x1),
+for i=(iend+1):(nV-x1)
+    %fprintf('Processing %d of %d...',i,nV); %dt
     R(i) = feval(FUN,V(x+i),varargin{:}) ;
 end
 
 % 3. trailing elements, start were section 2 finished
-for i=(i+1):nV,
+for i=(i+1):nV
+    %fprintf('Processing %d of %d...',i,nV); %dt
     R(i) = feval(FUN,V((i+x0):nV),varargin{:}) ;
 end
 end

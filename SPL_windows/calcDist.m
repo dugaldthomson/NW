@@ -1,4 +1,4 @@
-function [R1 R2] = calcDist(lats, longs, array1, array2)
+function [R1,R2] = calcDist(lats, longs, array1, array2)
 %%  calcDist - calculates the distance and angle from an AIS contact to NW
 %   array nodes
 R1 = zeros(length(lats),48,2);
