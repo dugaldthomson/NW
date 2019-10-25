@@ -1,9 +1,9 @@
 %% concatWavAll
-% Concatenate 5-min 48-ch wav files into a single wav
+% Concatenate 10-min 48-ch wav files into a single wav
 clearvars
 
 %% Set parameters
-setDir = 'C:\Users\510PAS\PhD\Data\NW\HebSky';      % Set directory
+setDir = 'C:\Users\510PAS\PhD\Data\NW\OcEnd\20150830_AAA1';      % Set directory
 
 %% Get all the file names in the directory
 cd(setDir)

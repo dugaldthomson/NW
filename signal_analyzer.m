@@ -1,9 +1,9 @@
 %% Signal Analyzer
 % Inspect a wav file of interest for sample rate, length, etc
 sigAn = 0;  % turn on to initiate MATLAB signalAnalyzer GUI
-spec = 0;   % turn on to initiate spectrogram
+spec = 1;   % turn on to initiate spectrogram
 %% Point to file
-NWFile = 'allCh.wav';
+NWFile = fullfile('C:\Users\510PAS\PhD\Data\NW\OcEnd\20150830_AAA2\west_aaa2_20150830_094520_00_0010.wav');
 
 %% Read in file
 [x,fs] = audioread(NWFile);  
@@ -27,7 +27,6 @@ if spec == 1
     figure
     spectrogram(x(:,1),winSize,overlap,fftsize,fs,'yaxis')
 end
-
 
 %% JUNK
 % multi = 'west_aaa2_20150826_165958_00_0131.wav';
