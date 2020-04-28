@@ -3,8 +3,8 @@
 clearvars
 
 %% Set parameters
-ch = 1;                                             % Which channel to extract
-setDir = 'C:\Users\510PAS\PhD\Data\NW\HebSky';      % Set directory
+ch = 24;                                             % Which channel to extract
+setDir = 'C:\Users\510PAS\PhD\Data\NW_2019\OcEnd\20190827_AAA2\wav';      % Set directory
 
 %% Get all the file names in the directory
 cd(setDir)
@@ -20,5 +20,5 @@ for iFile = 1:nFiles
     extCh = vertcat(extCh, data(:,ch));                     % Take ch from 48-ch file, concat w extCh
 end
 %% save the single-channel file as wav
-savename = fullfile(setDir,'singleCh.wav');
+savename = fullfile(setDir,'singleCh24.wav');
 audiowrite(savename,extCh,fs);
