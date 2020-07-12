@@ -3,7 +3,7 @@
 clearvars
 
 %% Set parameters
-setDir = 'C:\Users\510PAS\PhD\Data\NW\Lat\20150903_AAA2';      % Set directory
+setDir = 'C:\Users\510PAS\PhD\Data\NW_2019\OcEnd\20190827_AAA2\wav\ML';      % Set directory
 
 %% Get all the file names in the directory
 cd(setDir)
@@ -19,5 +19,5 @@ for iFile = 1:nFiles
 %     extCh = vertcat(extCh, data(:,ch));                     % Take ch from 48-ch file, concat w extCh
 end
 %% save the single-channel file as wav
-savename = fullfile(setDir,'\proc\allCh.wav');
+savename = fullfile(setDir,'\proc\48Ch.wav');
 audiowrite(savename,extCh,fs,'BitsPerSample',16);

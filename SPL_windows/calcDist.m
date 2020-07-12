@@ -6,8 +6,8 @@ R2 = zeros(length(lats),48,2);
 for j = 1:length(lats)  % does it need loop?
     [arc1,az1] = distance([lats(j) longs(j)],array1);  %output is arclength
     [arc2,az2] = distance([lats(j) longs(j)],array2);  %from contact to arrays
-    R1(j,:,1) = deg2km(arc1);
-    R2(j,:,1) = deg2km(arc2);
+    R1(j,:,1) = 1000*deg2km(arc1);
+    R2(j,:,1) = 1000*deg2km(arc2);
     R1(j,:,2) = az1;
     R2(j,:,2) = az2;
 end
