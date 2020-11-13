@@ -3,7 +3,10 @@
 sigAn = 0;  % turn on to initiate MATLAB signalAnalyzer GUI
 spec = 1;   % turn on to initiate spectrogram
 %% Point to file
-NWFile = fullfile('C:\Users\510PAS\PhD\Data\NW\OcEnd\20150830_AAA2\west_aaa2_20150830_094520_00_0010.wav');
+%NWFile = fullfile('C:\Users\510PAS\PhD\Data\NW\OcEnd\20150830_AAA2\west_aaa2_20150830_094520_00_0010.wav');
+
+NWFile = fullfile('D:\SRKW_Chan17_2020-08-27_12-01-33_ADC05000mV_00dB.wav');
+
 
 %% Read in file
 [x,fs] = audioread(NWFile);  
@@ -11,7 +14,7 @@ info1 = audioinfo(NWFile);
 whos x
 
 %% Calculate time length of wav file
-time = length(x(:,1))/fs/60;
+time = length(x(:,1))/fs;
 
 %% Optional MATLAB GUI
 if sigAn == 1
@@ -20,7 +23,7 @@ end
 
 %% Optional Spectrogram
 if spec == 1
-    dur=0.5;
+    dur=0.010;
     winSize=round(fs*dur);
     overlap=round(winSize/2);
     fftsize=winSize;

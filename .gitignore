@@ -1,0 +1,16 @@
+*.fig
+*.bag
+*.mat
+*.xlsx
+*.dat
+Bathy/topotoolbox
+Bathy/demViewer
+calcSPL/spl_demo
+ECPINS
+Gassmann
+restore_idl
+SPL_windows/Backups
+SPL_windows/saved
+Winds/import
+
+
