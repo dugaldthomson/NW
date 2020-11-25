@@ -1,4 +1,6 @@
 %% For AIS parsed data, extract a kml file
+%Need to load an AIS file in .mat format with a structure named AIS with
+%fields named datetime, lat, long and mmsi
 load('mergedAISwtype.mat');
 summary(AIS);
 
