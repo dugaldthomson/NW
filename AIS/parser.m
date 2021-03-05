@@ -1,9 +1,8 @@
 %% For AIS parsed data, extract a kml file
 %Need to load an AIS file in .mat format with a structure named AIS with
 %fields named datetime, lat, long and mmsi
-load('mergedAISwtype.mat');
-summary(AIS);
-
+%load('AIS.mat');
+%summary(AIS);
 %% find each unique mmsi
 [~,contacts] = findgroups(AIS.mmsi); %count the number of unique AIS contacts by mmsi
 
@@ -12,7 +11,7 @@ for i = 1:length(contacts)
     vars = {'datetime','lat','long'};
     T = AIS(rows,vars);
     send = [juliandate(T.datetime),T.lat,T.long];
-    pwr_kml_tll(num2str(contacts(i)),send)
+    pwr_kml_tll(num2str(contacts(i)),send);
 end
 
 function pwr_kml_tll(Name,TLL)
@@ -39,7 +38,7 @@ fprintf(fid, '%s \n',HEADER3);
 
 %%Start loop.  Each iteration adds data for one position.
 for i=1:size(TLL,1)
-    disp(i) %count loop iterations
+%    disp(i) %count loop iterations
     %create XML header and footer for each dive
     % DT - offset datestr by 4419.5  - 3/10/20 - times are all off by 12
     % hrs, need to make it 4420  --  KML is 12 hours AHEAD (fast)

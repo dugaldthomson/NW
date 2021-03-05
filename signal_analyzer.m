@@ -5,7 +5,7 @@ spec = 1;   % turn on to initiate spectrogram
 %% Point to file
 %NWFile = fullfile('C:\Users\510PAS\PhD\Data\NW\OcEnd\20150830_AAA2\west_aaa2_20150830_094520_00_0010.wav');
 
-NWFile = fullfile('D:\SRKW_Chan17_2020-08-27_12-01-33_ADC05000mV_00dB.wav');
+NWFile = fullfile('C:\Users\510PAS\Downloads\D91_1440-1810.wav');
 
 
 %% Read in file
@@ -22,8 +22,10 @@ if sigAn == 1
 end
 
 %% Optional Spectrogram
+
+
 if spec == 1
-    dur=0.010;
+    dur=0.5;
     winSize=round(fs*dur);
     overlap=round(winSize/2);
     fftsize=winSize;
