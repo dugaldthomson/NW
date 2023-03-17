@@ -5,7 +5,7 @@ clearvars
 %% Set parameters
 ch = 2;                                             % Which channel to extract
 %setDir = 'C:\Users\510PAS\PhD\Data\NW_2019\Amundsen\20190828_AAA2-B\wav';      % Set directory
-setDir = 'C:\Users\510PAS\PhD\Data\_2022-08-30-03-06-28GMT';
+setDir = 'C:\Users\510PAS\PhD\Data\NW_2019\Amundsen\20190805_AAA1';
 
 
 %% Get all the file names in the directory

@@ -4,8 +4,9 @@ sigAn = 0;  % turn on to initiate MATLAB signalAnalyzer GUI
 spec = 1;   % turn on to initiate spectrogram
 %% Point to file
 %NWFile = fullfile('C:\Users\510PAS\PhD\Data\NW\OcEnd\20150830_AAA2\west_aaa2_20150830_094520_00_0010.wav');
+% NWFile = fullfile('C:\Users\510PAS\PhD\Data\NW_2019\OcEnd\20190827_AAA2\wav\singleCh24.wav');
 
-NWFile = fullfile('C:\Users\510PAS\Downloads\D91_1440-1810.wav');
+%NWFile = fullfile('C:\Users\510PAS\Downloads\D91_1440-1810.wav');
 
 
 %% Read in file
@@ -22,7 +23,6 @@ if sigAn == 1
 end
 
 %% Optional Spectrogram
-
 
 if spec == 1
     dur=0.5;
